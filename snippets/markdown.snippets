@@ -88,14 +88,15 @@ snippet pullquote
 
 # snippet for wintersmith blog template header
 
-snippet wintersmith
+snippet xsite
 	
 	---
 	title: ${1:blog_title}
-	date: ${2:2013}-${3:00}-${4:00} 
+	published: `system("date +%Y-%m-%d")`
+	modified: `system("date +%Y-%m-%d")`
 	author: Mark Gemmill 
-	view: post.coffee
-	template: post.jade
+	template: post.jinja
+	active: false
 	tags:
 	  - misc 
 	----
